@@ -41,13 +41,6 @@ poetry.lock
 # Generated files
 sensitivity.png
 
-#PUblishing
-PUBLISHING.md
-PUBLISHING.md
+#
 PUBLISH.md
-
-
-#toml
-pyproject.toml
-
 

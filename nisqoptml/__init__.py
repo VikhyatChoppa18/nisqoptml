@@ -14,5 +14,11 @@ Email: venkata_choppa@outlook.com
 
 from .qnn import QNN
 
+# Benchmark module available for performance testing
+try:
+    from .benchmark import run_benchmark_suite, print_benchmark_table, encode_mnist_digit
+    __all__ = ['QNN', 'run_benchmark_suite', 'print_benchmark_table', 'encode_mnist_digit']
+except ImportError:
+    __all__ = ['QNN']
+
 __version__ = "0.1.0"
-__all__ = ['QNN']

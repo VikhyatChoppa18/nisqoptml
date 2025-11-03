@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "nisqoptml"
-version = "0.1.0"
+version = "0.1.1"
 description = "NISQ-Optimized Machine Learning: Noise-resilient QML library with Federated and DP Support"
 authors = ["Venkata Vikhyat Choppa <venkata_choppa@outlook.com>"]
 readme = "README.md"
