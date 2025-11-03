@@ -154,7 +154,7 @@ If you use this library in your research, please cite:
   title = {NISQOptML: NISQ-Optimized Machine Learning},
   version = {0.1.0},
   year = {2025},
-  url = {https://github.com/yourusername/nisqoptml}
+  url = {https://github.com/VikhyatChoppa18/nisqoptml}
 }
 ```
 
