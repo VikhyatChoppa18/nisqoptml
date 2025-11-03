@@ -4,16 +4,16 @@
 
 ## Overview
 
-This library provides a comprehensive framework for building and training quantum neural networks on NISQ (Noisy Intermediate-Scale Quantum) devices. It addresses key challenges in quantum machine learning including noise mitigation, distributed execution, and privacy-preserving federated learning.
+This library provides a framework for building and training quantum neural networks on NISQ (Noisy Intermediate-Scale Quantum) devices. It addresses challenges in quantum machine learning including noise mitigation, distributed execution, and privacy-preserving federated learning.
 
 ## Key Features
 
-- 🚀 **Quantum Neural Networks (QNN)** - Build and train variational quantum circuits
-- 🛡️ **Noise Mitigation** - Automatic error mitigation and zero-noise extrapolation techniques
-- 🌐 **Federated Learning** - Train models across distributed nodes with FedAvg
-- 🔒 **Differential Privacy** - Add Gaussian noise for privacy-preserving training
-- 📊 **Explainability** - Sensitivity analysis and parameter visualization tools
-- ⚡ **Distributed Execution** - MPI-based distributed quantum circuit execution
+- **Quantum Neural Networks (QNN)** - Build and train variational quantum circuits
+- **Noise Mitigation** - Automatic error mitigation and zero-noise extrapolation techniques
+- **Federated Learning** - Train models across distributed nodes with FedAvg
+- **Differential Privacy** - Add Gaussian noise for privacy-preserving training
+- **Explainability** - Sensitivity analysis and parameter visualization tools
+- **Distributed Execution** - MPI-based distributed quantum circuit execution
 
 ## Installation
 

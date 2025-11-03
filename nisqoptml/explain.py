@@ -2,7 +2,7 @@
 Sensitivity analysis and explainability for quantum models.
 
 This module provides tools for analyzing parameter sensitivity and
-understanding quantum model behavior.
+potentially understanding quantum model behavior.
 """
 
 import numpy as np
@@ -14,11 +14,11 @@ def sensitivity_analyzer(params, noise_impact=False):
     Analyze and visualize parameter sensitivity.
     
     Creates a plot showing the sensitivity of different parameters,
-    which helps understand model behavior and identify critical parameters.
+    which might help understand model behavior and identify critical parameters.
     
     Args:
         params: Model parameters to analyze (numpy array)
-        noise_impact: If True, annotate regions with high noise sensitivity
+        noise_impact: If True, may annotate regions with high noise sensitivity
     
     Returns:
         Confirmation message with plot filename
@@ -39,7 +39,7 @@ def sensitivity_analyzer(params, noise_impact=False):
     
     # Add noise impact annotation if requested
     if noise_impact:
-        # Find regions with high variance (more sensitive)
+        # Find regions with high variance (potentially more sensitive)
         threshold = params_flat.std() * 1.5
         high_sensitivity = np.abs(params_flat) > threshold
         if np.any(high_sensitivity):

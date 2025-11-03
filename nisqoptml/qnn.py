@@ -1,9 +1,9 @@
 """
 Quantum Neural Network (QNN) implementation for NISQ devices.
 
-This module implements a noise-resilient quantum neural network with support
-for federated learning and differential privacy. Designed for use with NISQ
-(Noisy Intermediate-Scale Quantum) devices.
+This module provides a noise-resilient quantum neural network implementation
+that could support federated learning and differential privacy. Designed
+for potential use with NISQ (Noisy Intermediate-Scale Quantum) devices.
 """
 
 import pennylane as qml
@@ -19,7 +19,7 @@ class QNN:
     """
     Quantum Neural Network for NISQ devices.
     
-    Implements a variational quantum circuit with support for error mitigation,
+    A variational quantum circuit implementation that could support error mitigation,
     distributed execution, and federated learning with differential privacy.
     
     Args:
@@ -41,13 +41,13 @@ class QNN:
         self.mitigation = mitigation
         self.distributed = distributed
         self.federated = federated
-        self.dp_sigma = dp_sigma  # Gaussian noise std dev for DP
+        self.dp_sigma = dp_sigma  # Gaussian noise std dev for DP (if enabled)
         
         # Initialize quantum device
         self.dev = qml.device('default.qubit', wires=qubits)
         
         # Random initialization of variational parameters
-        # Using uniform distribution over [0, 2π] as per common practice
+        # Could use uniform distribution over [0, 2π] as per common practice
         self.params = np.random.uniform(0, 2*np.pi, (layers, qubits))
         
         # Quantum-aware optimizer
@@ -58,7 +58,7 @@ class QNN:
         Construct the variational quantum circuit.
         
         Uses alternating rotation gates (RY, RZ) followed by entangling
-        CNOT gates. This architecture is well-suited for NISQ devices.
+        CNOT gates. This architecture might work well for NISQ devices.
         
         Args:
             x: Input features (classical data)
@@ -98,8 +98,8 @@ class QNN:
             """
             Compute the cost function (MSE loss).
             
-            Handles both tensor and numpy inputs for flexibility.
-            Supports distributed execution and error mitigation.
+            Can handle both tensor and numpy inputs for flexibility.
+            May support distributed execution and error mitigation.
             """
             # Handle both tensor and numpy parameter inputs
             if isinstance(params, torch.Tensor):
@@ -112,7 +112,7 @@ class QNN:
             preds = []
             for x in X:
                 if self.distributed:
-                    # Use distributed execution if enabled
+                    # Could use distributed execution if enabled
                     pred = distribute_circuit(qnode, x, params_np, shots)
                 else:
                     # Standard single-node execution
@@ -145,7 +145,7 @@ class QNN:
         Federated learning training with optional differential privacy.
         
         Implements FedAvg algorithm with local training followed by global
-        aggregation. Supports adding Gaussian noise for differential privacy.
+        aggregation. Can add Gaussian noise for differential privacy if enabled.
         
         Args:
             local_X: Local training features
@@ -215,7 +215,7 @@ class QNN:
         Analyzes parameter sensitivity and creates a visualization plot.
         
         Args:
-            noise_impact: If True, annotate high noise impact regions
+            noise_impact: If True, may annotate high noise impact regions
         
         Returns:
             Message confirming plot generation

@@ -1,8 +1,8 @@
 """
 Error mitigation techniques for NISQ devices.
 
-This module implements various error mitigation strategies to improve
-the reliability of quantum circuit outputs on noisy devices.
+This module implements various error mitigation strategies that might
+improve the reliability of quantum circuit outputs on noisy devices.
 """
 
 import qiskit
@@ -16,8 +16,8 @@ class ErrorPredictor(nn.Module):
     """
     Neural network for predicting and correcting quantum errors.
     
-    Learns to predict errors in quantum measurements and applies
-    corrections to improve accuracy.
+    Learns to predict errors in quantum measurements and could apply
+    corrections to potentially improve accuracy.
     """
     
     def __init__(self, input_dim=10, hidden_dim=32):
@@ -45,7 +45,7 @@ def mitigate_apply(pred, method='auto'):
         method: Mitigation method - 'auto' or 'zne' (default: 'auto')
     
     Returns:
-        Corrected predictions with reduced error
+        Corrected predictions with potentially reduced error
     
     Methods:
         - 'auto': Uses neural network to predict and correct errors
@@ -63,7 +63,7 @@ def mitigate_apply(pred, method='auto'):
         optimizer = optim.Adam(model.parameters(), lr=0.001)
         
         # Quick training on synthetic error patterns
-        # In practice, this would be trained on calibration data
+        # In practice, this could be trained on calibration data
         for _ in range(10):
             loss = model(torch.rand(10, dtype=torch.float32)).mean()
             optimizer.zero_grad()
@@ -85,7 +85,7 @@ def mitigate_apply(pred, method='auto'):
     
     elif method == 'zne':
         # Zero-noise extrapolation: simple scaling approach
-        # Assumes errors scale linearly with noise
+        # Assumes errors might scale linearly with noise
         noise_model = NoiseModel()  # Could be configured with actual noise parameters
         
         if isinstance(pred, list):

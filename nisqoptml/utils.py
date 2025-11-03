@@ -2,7 +2,7 @@
 Utility functions for quantum optimization.
 
 This module provides quantum-aware optimizers and helper functions
-for training quantum neural networks.
+that might be useful for training quantum neural networks.
 """
 
 import sympy as sp
@@ -15,7 +15,7 @@ class OptimizerWrapper:
     """
     Wrapper for PyTorch optimizers to work with quantum cost functions.
     
-    Provides a unified step(cost_fn, params) interface that handles both
+    Provides a unified step(cost_fn, params) interface that could handle both
     automatic differentiation and finite-difference gradients.
     """
     
@@ -58,7 +58,7 @@ class OptimizerWrapper:
             optimizer.step()
         else:
             # Fallback to finite differences for gradient estimation
-            # This is useful when gradients aren't available
+            # This might be useful when gradients aren't available
             loss_val = float(loss)
             eps = 1e-5  # Perturbation step size
             grad = np.zeros_like(params)
@@ -83,7 +83,7 @@ def quantum_optimizer(lr=0.01):
     Create a quantum-aware optimizer.
     
     Uses symbolic simplification to demonstrate quantum-aware optimization
-    techniques. In practice, this could be extended with quantum-specific
+    techniques. Could potentially be extended with quantum-specific
     optimization strategies.
     
     Args:

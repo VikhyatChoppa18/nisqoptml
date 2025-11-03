@@ -2,8 +2,8 @@
 Distributed quantum circuit execution using MPI.
 
 This module provides functions for distributing quantum circuit execution
-across multiple nodes using MPI (Message Passing Interface). Supports both
-distributed circuit execution and federated aggregation.
+across multiple nodes using MPI (Message Passing Interface). Could support
+both distributed circuit execution and federated aggregation.
 """
 
 try:
@@ -27,8 +27,8 @@ def distribute_circuit(qnode, x, params, shots):
     """
     Distribute quantum circuit execution across multiple nodes.
     
-    Splits the total number of shots across available MPI processes,
-    executes locally, and aggregates results.
+    Could split the total number of shots across available MPI processes,
+    execute locally, and aggregate results.
     
     Args:
         qnode: Quantum node (circuit) to execute
